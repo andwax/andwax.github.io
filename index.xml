@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>andrew waxman</title>
+    <link>https://www.andrewrwaxman.com/</link>
+    <description>Recent content on andrew waxman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 25 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.andrewrwaxman.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://www.andrewrwaxman.com/about/</link>
+      <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/about/</guid>
+      <description>I am an Assistant Professor of Economics and Public Policy at the LBJ School of Public Affairs at the University of Texas at Austin. I am also a Fellow at the Belfer Center at the Harvard Kennedy Center. I was formerly an affiliate of the Cornell Institute for China Economic Research (CICER) program.
+I am an applied microeconomist examining the relationship between environmental outcomes, urban policies and inequality. Much of his work consists in trying to think about how household location decisions of place of work and residence have implications for levels of emissions from home electricity usage as well as from commuting using personal vehicles.</description>
+    </item>
+    
+    <item>
+      <title>Mermaid JS support</title>
+      <link>https://www.andrewrwaxman.com/posts/mermaid-support/</link>
+      <pubDate>Mon, 25 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/posts/mermaid-support/</guid>
+      <description>If you want to use Mermaid-JS on your website. Provide mermaid as Shortcode in your markdown file.
+flowchart LRA --&gt; BB --&gt; CC --&gt; D D --&gt; BsequenceDiagramparticipant Aliceparticipant BobAlice-&gt;&gt;Bob: Hi BobBob-&gt;&gt;Alice: Hi AliceFind more example on Mermaid-JS website.</description>
+    </item>
+    
+    <item>
+      <title>HTML and CSS only tabs</title>
+      <link>https://www.andrewrwaxman.com/posts/html-and-css-only-tabs/</link>
+      <pubDate>Sun, 15 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/posts/html-and-css-only-tabs/</guid>
+      <description>Basic shortcodesLink to headingThe following content:
+{{&amp;lt; tabgroup &amp;gt;}} {{&amp;lt; tab name=&amp;#34;Hello&amp;#34; &amp;gt;}} Hello World! {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab name=&amp;#34;Goodbye&amp;#34; &amp;gt;}} Goodbye Everybody! {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; /tabgroup &amp;gt;}} Will generate:
+HelloHello World!GoodbyeGoodbye Everybody!Right alighmentLink to headingYou can also align the tabs to the right:
+{{&amp;lt; tabgroup align=&amp;#34;right&amp;#34; &amp;gt;}} {{&amp;lt; tab name=&amp;#34;Hello&amp;#34; &amp;gt;}} Hello World! {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab name=&amp;#34;Goodbye&amp;#34; &amp;gt;}} Goodbye Everybody!</description>
+    </item>
+    
+    <item>
+      <title>Guia de Sintaxe Markdown</title>
+      <link>https://www.andrewrwaxman.com/posts/markdown-syntax.pt-br/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/posts/markdown-syntax.pt-br/</guid>
+      <description>&lt;p&gt;Esse artigo é um exemplo básico para mostrar a sintaxe Markdown que é usada nos arquivos de conteúdo do Hugo. Ele também mostrar como cada elemento básico HTML é estilizado com CSS com os temas do Hugo.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>https://www.andrewrwaxman.com/posts/markdown-syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/posts/markdown-syntax/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Conteúdo Rico</title>
+      <link>https://www.andrewrwaxman.com/posts/rich-content.pt-br/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/posts/rich-content.pt-br/</guid>
+      <description>&lt;p&gt;O Hugo vem com vários &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes&#34;&gt;Shortcodes Internos&lt;/a&gt; para conteúdo rico, assim como uma &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Configuração de Privacidade&lt;/a&gt; e uma gama de Shortcodes simples que permitem embutir versões estáticas e sem JS de várias de redes sociais.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Rich Content</title>
+      <link>https://www.andrewrwaxman.com/posts/rich-content/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/posts/rich-content/</guid>
+      <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mais Conteúdo Rico</title>
+      <link>https://www.andrewrwaxman.com/posts/more-rich-content.pt-br/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/posts/more-rich-content.pt-br/</guid>
+      <description>&lt;p&gt;O Hugo Coder proporciona alguns Shortcodes Customizados.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>More Rich Content</title>
+      <link>https://www.andrewrwaxman.com/posts/more-rich-content/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/posts/more-rich-content/</guid>
+      <description>&lt;p&gt;Hugo Coder provides some Custom Shortcodes.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Placeholder Text</title>
+      <link>https://www.andrewrwaxman.com/posts/placeholder-text/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/posts/placeholder-text/</guid>
+      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Texto de Exemplo</title>
+      <link>https://www.andrewrwaxman.com/posts/placeholder-text.pt-br/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/posts/placeholder-text.pt-br/</guid>
+      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Configuração de Equações Matemáticas</title>
+      <link>https://www.andrewrwaxman.com/posts/math-typesetting.pt-br/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/posts/math-typesetting.pt-br/</guid>
+      <description>&lt;p&gt;Em um projeto Hugo as Notações Matemáticas podem ser usadas com a ajuda de bibliotecas JavaScript de terceiros.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Math Typesetting</title>
+      <link>https://www.andrewrwaxman.com/posts/math-typesetting/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/posts/math-typesetting/</guid>
+      <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Emoji Support</title>
+      <link>https://www.andrewrwaxman.com/posts/emoji-support/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/posts/emoji-support/</guid>
+      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Suporte a Emojis</title>
+      <link>https://www.andrewrwaxman.com/posts/emoji-support.pt-br/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/posts/emoji-support.pt-br/</guid>
+      <description>&lt;p&gt;Emojis podem ser ativados em um projeto Hugo de diversar formas.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>External Page: Hugo Coder Wiki</title>
+      <link>https://www.andrewrwaxman.com/posts/hugo-coder-wiki/</link>
+      <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/posts/hugo-coder-wiki/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Página Externa: Wiki Hugo Coder</title>
+      <link>https://www.andrewrwaxman.com/posts/hugo-coder-wiki/</link>
+      <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/posts/hugo-coder-wiki/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://www.andrewrwaxman.com/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/contact/</guid>
+      <description>Lyndon B. Johnson School of Public Affairs The University of Texas at Austin P. O. Box Y Austin, TX 78713
+Phone: (512) 471-2027
+awaxman [at] utexas.edu</description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>https://www.andrewrwaxman.com/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/research/</guid>
+      <description>PublicationsLink to headingLeveraging scale economies and policy incentives: Carbon capture, utilization &amp;amp; storage in Gulf clusters at Energy Policy (2021)Link to heading(with Sean Corcoran, Andrew Robison, Ben Leibowicz, and Sheila Olmstead)
+Carbon capture, utilization and storage (CCUS) represents a set of technologies essential to meeting ambitious mid-to late-century decarbonization goals. Yet deployment of CCUS has been slow, with fewer than 20 large-scale facilities operating worldwide in 2019.</description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>https://www.andrewrwaxman.com/teaching/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andrewrwaxman.com/teaching/</guid>
+      <description>Climate PolicyLink to headingInstructor, PA 388K, University of Texas at Austin, Master&amp;rsquo;s Level, Spring 2020
+Urban Economics &amp;amp; PolicyLink to headingInstructor, PA 393L, University of Texas at Austin, Master&amp;rsquo;s Level, Spring 2019, 2020, 2022
+Microeconomics / Applied Economics for Policy AnalysisLink to headingInstructor, PA 393G &amp;amp; 393K, University of Texas at Austin, Master&amp;rsquo;s Level, Fall 2018-2021
+Advanced Economics for Public Administration &amp;amp; Public PolicyLink to headingInstructor, PAF 603, Arizona State University, Doctorate Microeconomics, Spring 2017, 2018</description>
+    </item>
+    
+  </channel>
+</rss>
