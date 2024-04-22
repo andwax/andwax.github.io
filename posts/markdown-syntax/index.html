@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>
+
+<head>
+  <title>
   Markdown Syntax Guide · andrew waxman
 </title>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
 
 
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://cdn.jsdelivr.net/; prefetch-src 'self'; connect-src 'self' https://www.google-analytics.com;">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://cdn.jsdelivr.net/; connect-src 'self' https://www.google-analytics.com;">
 
 
 
@@ -18,18 +19,22 @@
 <meta name="description" content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
 <meta name="keywords" content="publicpolicy,economics,urban,environmental,transportation,energy">
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Markdown Syntax Guide"/>
-<meta name="twitter:description" content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."/>
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="Markdown Syntax Guide">
+<meta name="twitter:description" content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
 
-<meta property="og:title" content="Markdown Syntax Guide" />
-<meta property="og:description" content="Sample article showcasing basic Markdown syntax and formatting for HTML elements." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.andrewrwaxman.com/posts/markdown-syntax/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-03-11T00:00:00+00:00" />
-<meta property="article:modified_time" content="2019-03-11T00:00:00+00:00" />
-<meta property="og:see_also" content="https://www.andrewrwaxman.com/posts/html-and-css-only-tabs/" />
-
+<meta property="og:url" content="https://www.andrewrwaxman.com/posts/markdown-syntax/">
+  <meta property="og:site_name" content="andrew waxman">
+  <meta property="og:title" content="Markdown Syntax Guide">
+  <meta property="og:description" content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+  <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2019-03-11T00:00:00+00:00">
+    <meta property="article:modified_time" content="2019-03-11T00:00:00+00:00">
+    <meta property="article:tag" content="Markdown">
+    <meta property="article:tag" content="Css">
+    <meta property="article:tag" content="Html">
+      <meta property="og:see_also" content="https://www.andrewrwaxman.com/posts/html-and-css-only-tabs/">
 
 
 
@@ -37,12 +42,14 @@
 <link rel="canonical" href="https://www.andrewrwaxman.com/posts/markdown-syntax/">
 
 
-<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.c4d7e93a158eda5a65b3df343745d2092a0a1e2170feeec909b8a89443903c6a.css" integrity="sha256-xNfpOhWO2lpls980N0XSCSoKHiFw/u7JCbiolEOQPGo=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.min.38c4552ac40f9ae3408bad40358f654ebd8804412fe74ed56f2d6c8a7af82dd3.css" integrity="sha256-OMRVKsQPmuNAi61ANY9lTr2IBEEv507Vby1sinr4LdM=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -52,7 +59,7 @@
   
     
     
-    <link rel="stylesheet" href="/css/coder-dark.min.39e41a7f16bdf8cb16e43cae7d714fa1016f1d2d2898a5b3f27f42c9979204e2.css" integrity="sha256-OeQafxa9&#43;MsW5DyufXFPoQFvHS0omKWz8n9CyZeSBOI=" crossorigin="anonymous" media="screen" />
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
   
 
 
@@ -62,6 +69,7 @@
 
 
 
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
 <link rel="icon" type="image/png" href="/images/favicon.ico" sizes="32x32">
 <link rel="icon" type="image/png" href="/images/favicon.ico" sizes="16x16">
 
@@ -74,13 +82,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.102.3" />
 
 
 
 
 
-  </head>
+</head>
 
 
 
@@ -91,7 +98,7 @@
   
 <div class="float-container">
     <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
     </a>
 </div>
 
@@ -99,31 +106,33 @@
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
-    <a class="navigation-title" href="/">
+    
+    <a class="navigation-title" href="https://www.andrewrwaxman.com/">
       andrew waxman
     </a>
     
+    
       <input type="checkbox" id="menu-toggle" />
       <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
       </label>
       <ul class="navigation-list">
         
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/about/">About</a>
+              <a class="navigation-link " href="/about/">About</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/research/">Research</a>
+              <a class="navigation-link " href="/research/">Research</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/teaching/">Teaching</a>
+              <a class="navigation-link " href="/teaching/">Teaching</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/contact/">Contact me</a>
+              <a class="navigation-link " href="/contact/">Contact me</a>
             </li>
           
         
@@ -149,47 +158,47 @@
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
               <time datetime="2019-03-11T00:00:00Z">
                 March 11, 2019
               </time>
             </span>
             <span class="reading-time">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
               3-minute read
             </span>
           </div>
           
           <div class="categories">
-  <i class="fa fa-folder" aria-hidden="true"></i>
-    <a href="/categories/themes/">themes</a>
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/themes/">Themes</a>
       <span class="separator">•</span>
-    <a href="/categories/syntax/">syntax</a></div>
+    <a href="/categories/syntax/">Syntax</a></div>
 
           <div class="tags">
-  <i class="fa fa-tag" aria-hidden="true"></i>
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
     <span class="tag">
-      <a href="/tags/markdown/">markdown</a>
+      <a href="/tags/markdown/">Markdown</a>
     </span>
       <span class="separator">•</span>
     <span class="tag">
-      <a href="/tags/css/">css</a>
+      <a href="/tags/css/">Css</a>
     </span>
       <span class="separator">•</span>
     <span class="tag">
-      <a href="/tags/html/">html</a>
+      <a href="/tags/html/">Html</a>
     </span></div>
 
         </div>
       </header>
 
-      <div>
+      <div class="post-content">
         
         <p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>
 <h2 id="headings">
   Headings
   <a class="heading-link" href="#headings">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -197,49 +206,49 @@
 <h1 id="h1">
   H1
   <a class="heading-link" href="#h1">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h1>
 <h2 id="h2">
   H2
   <a class="heading-link" href="#h2">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
 <h3 id="h3">
   H3
   <a class="heading-link" href="#h3">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
 <h4 id="h4">
   H4
   <a class="heading-link" href="#h4">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
 <h5 id="h5">
   H5
   <a class="heading-link" href="#h5">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h5>
 <h6 id="h6">
   H6
   <a class="heading-link" href="#h6">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h6>
 <h2 id="paragraph">
   Paragraph
   <a class="heading-link" href="#paragraph">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -248,7 +257,7 @@
 <h2 id="blockquotes">
   Blockquotes
   <a class="heading-link" href="#blockquotes">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -256,7 +265,7 @@
 <h4 id="blockquote-without-attribution">
   Blockquote without attribution
   <a class="heading-link" href="#blockquote-without-attribution">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
@@ -267,7 +276,7 @@
 <h4 id="blockquote-with-attribution">
   Blockquote with attribution
   <a class="heading-link" href="#blockquote-with-attribution">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
@@ -278,7 +287,7 @@
 <h2 id="tables">
   Tables
   <a class="heading-link" href="#tables">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -304,7 +313,7 @@
 <h4 id="inline-markdown-within-tables">
   Inline Markdown within tables
   <a class="heading-link" href="#inline-markdown-within-tables">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
@@ -327,14 +336,14 @@
 <h2 id="code-blocks">
   Code Blocks
   <a class="heading-link" href="#code-blocks">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
 <h4 id="code-block-with-backticks">
   Code block with backticks
   <a class="heading-link" href="#code-block-with-backticks">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
@@ -351,7 +360,7 @@
 </span></span></code></pre></div><h4 id="code-block-indented-with-four-spaces">
   Code block indented with four spaces
   <a class="heading-link" href="#code-block-indented-with-four-spaces">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
@@ -369,7 +378,7 @@
 <h4 id="code-block-with-hugos-internal-highlight-shortcode">
   Code block with Hugo&rsquo;s internal highlight shortcode
   <a class="heading-link" href="#code-block-with-hugos-internal-highlight-shortcode">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
@@ -386,14 +395,14 @@
 <h2 id="list-types">
   List Types
   <a class="heading-link" href="#list-types">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
 <h4 id="ordered-list">
   Ordered List
   <a class="heading-link" href="#ordered-list">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
@@ -405,7 +414,7 @@
 <h4 id="unordered-list">
   Unordered List
   <a class="heading-link" href="#unordered-list">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
@@ -417,7 +426,7 @@
 <h4 id="nested-list">
   Nested list
   <a class="heading-link" href="#nested-list">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
@@ -439,7 +448,7 @@
 <h2 id="other-elements--abbr-sub-sup-kbd-mark">
   Other Elements — abbr, sub, sup, kbd, mark
   <a class="heading-link" href="#other-elements--abbr-sub-sup-kbd-mark">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
@@ -452,7 +461,7 @@
 <hr>
 <ol>
 <li id="fn:1">
-<p>The above quote is excerpted from Rob Pike&rsquo;s <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">talk</a> during Gopherfest, November 18, 2015.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>The above quote is excerpted from Rob Pike&rsquo;s <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c"  class="external-link" target="_blank" rel="noopener">talk</a> during Gopherfest, November 18, 2015.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -467,34 +476,16 @@
     
     
     
-      <h3 id="see-also-in-themes-guide">
-        See also in Themes Guide
-        <a class="heading-link" href="#see-also-in-themes-guide">
-          <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
-          <span class="sr-only">Link to heading</span>
-        </a>
-      </h3>
-      <nav>
-        <ul>
-        
-        
-          
-            <li>
-              <a href="/posts/html-and-css-only-tabs/">HTML and CSS only tabs</a>
-            </li>
-          
-        
-          
-        
-        </ul>
-      </nav>
-    
   
 </section>
 
 
         
         
+        
+        
+        
+
         
       </footer>
     </article>
@@ -514,7 +505,7 @@
      Andrew R. Waxman 
     ·
     
-    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
     
   </section>
 </footer>
@@ -525,7 +516,29 @@
 
   
   
-  <script src="/js/coder.min.236049395dc3682fb2719640872958e12f1f24067bb09c327b233e6290c7edac.js" integrity="sha256-I2BJOV3DaC&#43;ycZZAhylY4S8fJAZ7sJwyeyM&#43;YpDH7aw="></script>
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   

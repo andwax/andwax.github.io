@@ -4,53 +4,44 @@
     <title>Categories on andrew waxman</title>
     <link>https://www.andrewrwaxman.com/categories/</link>
     <description>Recent content in Categories on andrew waxman</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo 0.125.2</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 15 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.andrewrwaxman.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.andrewrwaxman.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>syntax</title>
+      <title>Syntax</title>
       <link>https://www.andrewrwaxman.com/categories/syntax/</link>
-      <pubDate>Sun, 15 May 2022 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.andrewrwaxman.com/categories/syntax/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>themes</title>
+      <title>Themes</title>
       <link>https://www.andrewrwaxman.com/categories/themes/</link>
-      <pubDate>Sun, 15 May 2022 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.andrewrwaxman.com/categories/themes/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>sintaxe</title>
+      <title>Sintaxe</title>
       <link>https://www.andrewrwaxman.com/categories/sintaxe/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.andrewrwaxman.com/categories/sintaxe/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>temas</title>
+      <title>Temas</title>
       <link>https://www.andrewrwaxman.com/categories/temas/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.andrewrwaxman.com/categories/temas/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Development</title>
       <link>https://www.andrewrwaxman.com/categories/development/</link>
-      <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.andrewrwaxman.com/categories/development/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>
