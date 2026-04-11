@@ -1,0 +1,274 @@
+
+<div style="padding: 1rem 0;">
+
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; font-size: 12px;">
+  <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:2px;background:#d73027;display:inline-block"></span><span style="color:var(--color-text-secondary)">Low income (&lt;$1,145)</span></span>
+  <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:2px;background:#fc8d59;display:inline-block"></span><span style="color:var(--color-text-secondary)">Lower-middle income ($1,146–$4,515)</span></span>
+  <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:2px;background:#4393c3;display:inline-block"></span><span style="color:var(--color-text-secondary)">Upper-middle income ($4,516–$14,005)</span></span>
+  <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:2px;background:#2166ac;display:inline-block"></span><span style="color:var(--color-text-secondary)">High income (&gt;$14,005)</span></span>
+  <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:2px;background:#ccc;display:inline-block"></span><span style="color:var(--color-text-secondary)">No data</span></span>
+</div>
+
+<div id="map" style="width:100%;"></div>
+
+<div style="margin-top: 1.5rem;">
+  <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 8px;">GNI per capita distribution (log scale, USD, Atlas method 2023)</p>
+  <div id="dotplot" style="width:100%; overflow:hidden;"></div>
+</div>
+
+<div id="tooltip" style="position:absolute;display:none;background:var(--color-background-primary);border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);padding:8px 12px;font-size:12px;pointer-events:none;z-index:99;"></div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+const incomeGroups = {
+  "Low income": { color: "#d73027", gni: [200, 1145] },
+  "Lower middle income": { color: "#fc8d59", gni: [1146, 4515] },
+  "Upper middle income": { color: "#4393c3", gni: [4516, 14005] },
+  "High income": { color: "#2166ac", gni: [14006, 90000] }
+};
+
+const countryData = {
+  "4": { name: "Afghanistan", group: "Low income", gni: 370 },
+  "24": { name: "Angola", group: "Lower middle income", gni: 2120 },
+  "32": { name: "Argentina", group: "Upper middle income", gni: 10660 },
+  "36": { name: "Australia", group: "High income", gni: 62620 },
+  "40": { name: "Austria", group: "High income", gni: 55220 },
+  "50": { name: "Bangladesh", group: "Lower middle income", gni: 2570 },
+  "56": { name: "Belgium", group: "High income", gni: 51290 },
+  "68": { name: "Bolivia", group: "Lower middle income", gni: 3520 },
+  "76": { name: "Brazil", group: "Upper middle income", gni: 9660 },
+  "104": { name: "Myanmar", group: "Lower middle income", gni: 1180 },
+  "116": { name: "Cambodia", group: "Lower middle income", gni: 1690 },
+  "120": { name: "Cameroon", group: "Lower middle income", gni: 1620 },
+  "124": { name: "Canada", group: "High income", gni: 52960 },
+  "140": { name: "Central African Republic", group: "Low income", gni: 480 },
+  "144": { name: "Sri Lanka", group: "Lower middle income", gni: 3730 },
+  "152": { name: "Chile", group: "High income", gni: 16050 },
+  "156": { name: "China", group: "Upper middle income", gni: 12850 },
+  "170": { name: "Colombia", group: "Upper middle income", gni: 7010 },
+  "180": { name: "DR Congo", group: "Low income", gni: 620 },
+  "188": { name: "Costa Rica", group: "Upper middle income", gni: 12140 },
+  "204": { name: "Benin", group: "Lower middle income", gni: 1390 },
+  "214": { name: "Dominican Rep.", group: "Upper middle income", gni: 9810 },
+  "218": { name: "Ecuador", group: "Upper middle income", gni: 6350 },
+  "818": { name: "Egypt", group: "Lower middle income", gni: 3890 },
+  "222": { name: "El Salvador", group: "Lower middle income", gni: 4350 },
+  "231": { name: "Ethiopia", group: "Low income", gni: 1020 },
+  "246": { name: "Finland", group: "High income", gni: 55690 },
+  "250": { name: "France", group: "High income", gni: 44490 },
+  "276": { name: "Germany", group: "High income", gni: 54040 },
+  "288": { name: "Ghana", group: "Lower middle income", gni: 2340 },
+  "300": { name: "Greece", group: "High income", gni: 20280 },
+  "320": { name: "Guatemala", group: "Upper middle income", gni: 5050 },
+  "324": { name: "Guinea", group: "Low income", gni: 1070 },
+  "332": { name: "Haiti", group: "Low income", gni: 1430 },
+  "340": { name: "Honduras", group: "Lower middle income", gni: 2670 },
+  "348": { name: "Hungary", group: "High income", gni: 18760 },
+  "356": { name: "India", group: "Lower middle income", gni: 2390 },
+  "360": { name: "Indonesia", group: "Upper middle income", gni: 4610 },
+  "364": { name: "Iran", group: "Upper middle income", gni: 6610 },
+  "368": { name: "Iraq", group: "Upper middle income", gni: 6050 },
+  "372": { name: "Ireland", group: "High income", gni: 79540 },
+  "376": { name: "Israel", group: "High income", gni: 49760 },
+  "380": { name: "Italy", group: "High income", gni: 36380 },
+  "388": { name: "Jamaica", group: "Upper middle income", gni: 5610 },
+  "392": { name: "Japan", group: "High income", gni: 41580 },
+  "400": { name: "Jordan", group: "Upper middle income", gni: 4560 },
+  "398": { name: "Kazakhstan", group: "Upper middle income", gni: 10890 },
+  "404": { name: "Kenya", group: "Lower middle income", gni: 2080 },
+  "408": { name: "North Korea", group: "Low income", gni: 600 },
+  "410": { name: "South Korea", group: "High income", gni: 33750 },
+  "418": { name: "Laos", group: "Lower middle income", gni: 2090 },
+  "422": { name: "Lebanon", group: "Lower middle income", gni: 3380 },
+  "430": { name: "Liberia", group: "Low income", gni: 680 },
+  "434": { name: "Libya", group: "Upper middle income", gni: 6280 },
+  "454": { name: "Malawi", group: "Low income", gni: 590 },
+  "458": { name: "Malaysia", group: "Upper middle income", gni: 11780 },
+  "466": { name: "Mali", group: "Low income", gni: 780 },
+  "484": { name: "Mexico", group: "Upper middle income", gni: 10470 },
+  "504": { name: "Morocco", group: "Lower middle income", gni: 3680 },
+  "508": { name: "Mozambique", group: "Low income", gni: 480 },
+  "516": { name: "Namibia", group: "Upper middle income", gni: 5010 },
+  "524": { name: "Nepal", group: "Lower middle income", gni: 1340 },
+  "528": { name: "Netherlands", group: "High income", gni: 58280 },
+  "554": { name: "New Zealand", group: "High income", gni: 47670 },
+  "558": { name: "Nicaragua", group: "Lower middle income", gni: 2180 },
+  "562": { name: "Niger", group: "Low income", gni: 560 },
+  "566": { name: "Nigeria", group: "Lower middle income", gni: 2200 },
+  "578": { name: "Norway", group: "High income", gni: 99990 },
+  "586": { name: "Pakistan", group: "Lower middle income", gni: 1470 },
+  "591": { name: "Panama", group: "High income", gni: 15340 },
+  "600": { name: "Paraguay", group: "Upper middle income", gni: 5790 },
+  "604": { name: "Peru", group: "Upper middle income", gni: 6740 },
+  "608": { name: "Philippines", group: "Lower middle income", gni: 3950 },
+  "616": { name: "Poland", group: "High income", gni: 19020 },
+  "620": { name: "Portugal", group: "High income", gni: 24540 },
+  "630": { name: "Puerto Rico", group: "High income", gni: 21690 },
+  "642": { name: "Romania", group: "High income", gni: 15510 },
+  "643": { name: "Russia", group: "Upper middle income", gni: 12830 },
+  "646": { name: "Rwanda", group: "Low income", gni: 920 },
+  "682": { name: "Saudi Arabia", group: "High income", gni: 24730 },
+  "686": { name: "Senegal", group: "Lower middle income", gni: 1680 },
+  "694": { name: "Sierra Leone", group: "Low income", gni: 540 },
+  "706": { name: "Somalia", group: "Low income", gni: 430 },
+  "710": { name: "South Africa", group: "Upper middle income", gni: 6490 },
+  "724": { name: "Spain", group: "High income", gni: 31280 },
+  "729": { name: "Sudan", group: "Low income", gni: 800 },
+  "752": { name: "Sweden", group: "High income", gni: 62290 },
+  "756": { name: "Switzerland", group: "High income", gni: 93720 },
+  "760": { name: "Syria", group: "Low income", gni: 760 },
+  "762": { name: "Tajikistan", group: "Low income", gni: 1140 },
+  "764": { name: "Thailand", group: "Upper middle income", gni: 7080 },
+  "768": { name: "Togo", group: "Low income", gni: 1010 },
+  "788": { name: "Tunisia", group: "Lower middle income", gni: 3980 },
+  "792": { name: "Turkey", group: "Upper middle income", gni: 10660 },
+  "800": { name: "Uganda", group: "Low income", gni: 870 },
+  "804": { name: "Ukraine", group: "Lower middle income", gni: 3960 },
+  "826": { name: "United Kingdom", group: "High income", gni: 47060 },
+  "840": { name: "United States", group: "High income", gni: 76370 },
+  "858": { name: "Uruguay", group: "High income", gni: 16490 },
+  "860": { name: "Uzbekistan", group: "Lower middle income", gni: 2190 },
+  "862": { name: "Venezuela", group: "Upper middle income", gni: 6340 },
+  "704": { name: "Vietnam", group: "Lower middle income", gni: 3560 },
+  "887": { name: "Yemen", group: "Low income", gni: 620 },
+  "894": { name: "Zambia", group: "Lower middle income", gni: 1100 },
+  "716": { name: "Zimbabwe", group: "Lower middle income", gni: 1890 }
+};
+
+const getColor = (id) => {
+  const d = countryData[String(id)];
+  if (!d) return "#ccc";
+  return incomeGroups[d.group]?.color || "#ccc";
+};
+
+const tooltip = document.getElementById("tooltip");
+
+d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then(world => {
+  const isDark = matchMedia("(prefers-color-scheme: dark)").matches;
+  const width = document.getElementById("map").offsetWidth || 700;
+  const height = Math.round(width * 0.5);
+
+  const svg = d3.select("#map").append("svg")
+    .attr("viewBox", `0 0 ${width} ${height}`)
+    .attr("width", "100%");
+
+  const projection = d3.geoNaturalEarth1()
+    .scale(width / 6.3)
+    .translate([width / 2, height / 2]);
+
+  const path = d3.geoPath(projection);
+
+  svg.append("rect")
+    .attr("width", width).attr("height", height)
+    .attr("fill", isDark ? "#1a1a1a" : "#e8f4f8")
+    .attr("rx", 6);
+
+  svg.selectAll("path")
+    .data(topojson.feature(world, world.objects.countries).features)
+    .join("path")
+    .attr("d", path)
+    .attr("fill", d => getColor(d.id))
+    .attr("stroke", isDark ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.6)")
+    .attr("stroke-width", 0.4)
+    .style("cursor", "pointer")
+    .on("mousemove", function(event, d) {
+      const info = countryData[String(d.id)];
+      if (!info) return;
+      const rect = document.getElementById("map").getBoundingClientRect();
+      tooltip.style.display = "block";
+      tooltip.style.left = (event.clientX - rect.left + 10) + "px";
+      tooltip.style.top = (event.clientY - rect.top - 40) + "px";
+      tooltip.innerHTML = `<strong>${info.name}</strong><br>
+        <span style="color:var(--color-text-secondary)">${info.group}</span><br>
+        GNI/capita: <strong>$${info.gni.toLocaleString()}</strong>`;
+    })
+    .on("mouseleave", function() {
+      tooltip.style.display = "none";
+    });
+
+  drawDotPlot();
+});
+
+function drawDotPlot() {
+  const isDark = matchMedia("(prefers-color-scheme: dark)").matches;
+  const countries = Object.values(countryData).sort((a, b) => a.gni - b.gni);
+  const w = document.getElementById("dotplot").offsetWidth || 700;
+  const h = 110;
+  const margin = { left: 48, right: 20, top: 16, bottom: 32 };
+  const innerW = w - margin.left - margin.right;
+  const innerH = h - margin.top - margin.bottom;
+
+  const svg = d3.select("#dotplot").append("svg")
+    .attr("viewBox", `0 0 ${w} ${h}`)
+    .attr("width", "100%");
+
+  const xScale = d3.scaleLog()
+    .domain([300, 110000])
+    .range([0, innerW]);
+
+  const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+  const thresholds = [
+    { x: xScale(1145), label: "$1,145", color: "#d73027" },
+    { x: xScale(4515), label: "$4,515", color: "#fc8d59" },
+    { x: xScale(14005), label: "$14,005", color: "#4393c3" }
+  ];
+
+  thresholds.forEach(t => {
+    g.append("line")
+      .attr("x1", t.x).attr("x2", t.x)
+      .attr("y1", 0).attr("y2", innerH)
+      .attr("stroke", isDark ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.15)")
+      .attr("stroke-dasharray", "3,2")
+      .attr("stroke-width", 1);
+    g.append("text")
+      .attr("x", t.x).attr("y", -4)
+      .attr("text-anchor", "middle")
+      .attr("font-size", "10px")
+      .attr("fill", isDark ? "rgba(255,255,255,0.45)" : "rgba(0,0,0,0.4)")
+      .text(t.label);
+  });
+
+  const jitter = () => (Math.random() - 0.5) * (innerH * 0.6);
+  const cy = innerH / 2;
+
+  g.selectAll("circle")
+    .data(countries)
+    .join("circle")
+    .attr("cx", d => xScale(d.gni))
+    .attr("cy", d => cy + jitter())
+    .attr("r", 4)
+    .attr("fill", d => incomeGroups[d.group]?.color || "#ccc")
+    .attr("opacity", 0.78)
+    .style("cursor", "pointer")
+    .on("mousemove", function(event, d) {
+      const rect = document.getElementById("dotplot").getBoundingClientRect();
+      tooltip.style.display = "block";
+      tooltip.style.left = (event.clientX - rect.left + 10) + "px";
+      tooltip.style.top = (event.clientY - rect.top - 40) + "px";
+      tooltip.innerHTML = `<strong>${d.name}</strong><br>
+        <span style="color:var(--color-text-secondary)">${d.group}</span><br>
+        GNI/capita: <strong>$${d.gni.toLocaleString()}</strong>`;
+    })
+    .on("mouseleave", function() {
+      tooltip.style.display = "none";
+    });
+
+  const xAxis = d3.axisBottom(xScale)
+    .tickValues([300, 1000, 3000, 10000, 30000, 100000])
+    .tickFormat(d => "$" + (d >= 1000 ? (d/1000).toFixed(0) + "k" : d));
+
+  g.append("g")
+    .attr("transform", `translate(0,${innerH})`)
+    .call(xAxis)
+    .selectAll("text")
+    .attr("font-size", "11px")
+    .attr("fill", isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.55)");
+
+  g.select(".domain").attr("stroke", isDark ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.2)");
+  g.selectAll(".tick line").attr("stroke", isDark ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.2)");
+}
+</script>
